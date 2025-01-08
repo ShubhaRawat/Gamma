@@ -1,0 +1,159 @@
+/* General styles for the navigation */
+.nav-container {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    width: 25%;
+    background-color: #f7f7f7;
+}
+
+/* Profile Section */
+.profile-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.profile-icon {
+    background-color: #4caf50;
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+}
+
+.user-details .user-name {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.user-details .version {
+    font-size: 14px;
+    color: #666;
+}
+
+/* Search Section */
+.search-container {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    border: 1px solid #ddd;
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-top: 10px;
+    border-radius: 8px;
+    background-color: white;
+}
+
+.search-icon {
+    width: 18px;
+    margin-right: 10px;
+}
+
+.search-input {
+    width: 200px;
+    padding: 5px;
+    border: none;
+    outline: none;
+}
+
+.shortcut {
+    margin-left: auto;
+    font-size: 12px;
+    color: #888;
+}
+
+/* Functionalities Section */
+.other-functionalities-container {
+    margin-top: 20px;
+}
+
+.functionality {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    cursor: pointer;
+    color: #726e6e;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    padding: 10px 20px;
+    border-radius: 8px;
+}
+
+.functionality:hover {
+    background-color: #e0e0e0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.functionality:active {
+    transform: scale(0.96);
+}
+
+/* Selected functionality styles */
+.functionality.selected {
+    color: #2b0aff;
+    background-color: #eae7ff;
+    border-radius: 8px;
+}
+
+.function-image {
+    width: 20px;
+    margin-right: 10px;
+}
+
+.function-name {
+    font-size: 16px;
+    margin: 0;
+}
+
+/* Folder Section */
+.folder-container {
+    margin-top: 20px;
+    font-size: 16px;
+    display: flex;
+    justify-content: space-between;
+    /* align-self: center; */
+    align-items: center;
+}
+
+.folders{
+    align-self: center;
+    padding: 0;
+    margin: 0;
+}
+
+.create-folder {
+    background-color: #fff;
+    color: #000;
+    border: none;
+    padding: 5px;
+    align-self: center;
+    border-radius: 100%;
+    font-size: 20px;
+    cursor: pointer;
+    margin: 0px;
+}
+
+
+
+.isempty-folder-text {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #777;
+}
+
+.isempty-folder-text span {
+    color: #007bff;
+    cursor: pointer;
+}
+
+.isempty-folder-text span:hover {
+    text-decoration: underline;
+}
+.another{
+    border-top: 1px solid #726e6e;
+    padding-top: 10px;
+}
