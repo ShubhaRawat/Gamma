@@ -1,9 +1,10 @@
+import Page from "./components/docView/page"
 
 function App() {
 
   return (
     <>
-      App
+      <Page/>
     </>
   )
 }
