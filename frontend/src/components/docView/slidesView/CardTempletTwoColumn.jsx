@@ -1,3 +1,4 @@
+//two image text
 import React from "react"
 import TitleInput from "./CardComponents/TitleInput"
 import ParagraphInput from "./CardComponents/ParagraphInput"

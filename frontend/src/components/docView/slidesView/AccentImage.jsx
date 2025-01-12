@@ -1,5 +1,5 @@
 "use client"
-
+//image right text left
 import React, { useState } from "react"
 import { CardMenu } from "./Menu/CardMenu"
 import TitleInput from "./CardComponents/TitleInput"

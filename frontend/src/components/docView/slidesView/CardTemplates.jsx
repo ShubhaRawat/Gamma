@@ -1,5 +1,6 @@
+//Starting File
 import React, { useState } from "react"
-import { Card } from "./ui/card"
+import { Card } from "../../ui/card"
 import { Grid2X2, Sparkles } from 'lucide-react'
 import CardTemplateTwoColumn from "./CardTempletTwoColumn"
 import CardTemplateImgHeadingThree from "./CardTemplateImgHeadingThree"
