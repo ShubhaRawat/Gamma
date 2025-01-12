@@ -5,17 +5,24 @@ import { Slide1, Slide2, Slide3, Slide4, Slide5, Slide6, Slide7 } from '@/compon
 import { closestCorners, DndContext } from '@dnd-kit/core';
 import { arrayMove } from '@dnd-kit/sortable';
 import CardTemplates from './slidesView/CardTemplates';
+import AddButton from './slidesView/AddButton';
 
 export default function Page() {
   const [currentSlide, setCurrentSlide] = useState(1);
   useEffect(() => {
-    const slideElement = document.getElementById(`slide-${currentSlide}`);
+    const slideElement = document.getElementById(`at-${currentSlide}`);
     if (slideElement) {
       slideElement.scrollIntoView({ behavior: 'smooth' });
     }
   }, [currentSlide]);
   const [slides, setSlides] = useState([
-    Slide1,Slide2,Slide3,Slide4,Slide5,Slide6,Slide7
+    { id: 1, Slide: <Slide1 /> },
+    { id: 2, Slide: <Slide2 /> },
+    { id: 3, Slide: <Slide3 /> },
+    { id: 4, Slide: <Slide4 /> },
+    { id: 5, Slide: <Slide5 /> },
+    { id: 6, Slide: <Slide6 /> },
+    { id: 7, Slide: <Slide7 /> }
   ])
   const handleDragEnd = (e) => {
     const {active,over} = e
@@ -36,15 +43,7 @@ export default function Page() {
     id: 1,
     title: 'Customer Targeting Strategy',
     content: (
-      <div className="space-y-2">
-        <h1 className="text-lg font-bold">Customer Targeting Strategy</h1>
-        <p className="text-xs text-muted-foreground line-clamp-2">
-          Unlocking the secret to customer success requires a comprehensive understanding...
-        </p>
-        <div className="aspect-video bg-muted rounded-lg flex items-center justify-center text-xs text-muted-foreground">
-          [Main Strategy Image]
-        </div>
-      </div>
+      <Slide1 />
     ),
     onClick: () => setCurrentSlide(1)
   },
@@ -53,19 +52,7 @@ export default function Page() {
     id: 2,
     title: 'Understanding Your Target Audience',
     content: (
-      <div className="space-y-2">
-        <h2 className="text-lg font-bold">Understanding Your Target Audience</h2>
-        <div className="grid grid-cols-2 gap-2">
-          <div className="aspect-square bg-muted rounded-lg flex items-center justify-center text-xs text-muted-foreground">
-            [Audience Persona]
-          </div>
-          <ul className="text-xs text-muted-foreground list-disc list-inside">
-            <li>Demographic info</li>
-            <li>Psychographic data</li>
-            <li>Behavioral patterns</li>
-          </ul>
-        </div>
-      </div>
+      <Slide2/>
     ),
     onClick: () => setCurrentSlide(2)
   },
@@ -74,19 +61,7 @@ export default function Page() {
     id: 3,
     title: 'Identifying Customer Pain Points',
     content: (
-      <div className="space-y-2">
-        <h2 className="text-lg font-bold">Identifying Customer Pain Points</h2>
-        <div className="grid grid-cols-3 gap-2">
-          {[1, 2, 3].map((i) => (
-            <div key={i} className="space-y-1">
-              <div className="aspect-square bg-muted rounded-lg flex items-center justify-center text-xs text-muted-foreground">
-                [Pain Point {i}]
-              </div>
-              <p className="text-xs text-muted-foreground truncate">Pain Point {i}</p>
-            </div>
-          ))}
-        </div>
-      </div>
+      <Slide3/>
     ),
     onClick: () => setCurrentSlide(3)
   },
@@ -95,15 +70,7 @@ export default function Page() {
     id: 4,
     title: 'Developing Buyer Personas',
     content: (
-      <div className="space-y-2">
-        <h2 className="text-lg font-bold">Developing Buyer Personas</h2>
-        <div className="aspect-square bg-muted rounded-lg flex items-center justify-center text-xs text-muted-foreground">
-          [Buyer Personas Infographic]
-        </div>
-        <p className="text-xs text-muted-foreground line-clamp-2">
-          Buyer personas are semi-fictional representations of your ideal customers...
-        </p>
-      </div>
+      <Slide4/>
     ),
     onClick: () => setCurrentSlide(4)
   },
@@ -112,20 +79,7 @@ export default function Page() {
     id: 5,
     title: 'Utilizing Customer Segmentation',
     content: (
-      <div className="space-y-2">
-        <h2 className="text-lg font-bold">Utilizing Customer Segmentation</h2>
-        <div className="grid grid-cols-2 gap-2">
-          <ul className="text-xs text-muted-foreground list-disc list-inside">
-            <li>Demographic</li>
-            <li>Psychographic</li>
-            <li>Behavioral</li>
-            <li>Geographic</li>
-          </ul>
-          <div className="aspect-square bg-muted rounded-lg flex items-center justify-center text-xs text-muted-foreground">
-            [Segmentation Diagram]
-          </div>
-        </div>
-      </div>
+      <Slide5/>
     ),
     onClick: () => setCurrentSlide(5)
   },
@@ -134,22 +88,7 @@ export default function Page() {
     id: 6,
     title: 'Crafting Tailored Marketing Strategies',
     content: (
-      <div className="space-y-2">
-        <h2 className="text-lg font-bold">Crafting Tailored Marketing Strategies</h2>
-        <div className="grid grid-cols-2 gap-2">
-          <div className="aspect-video bg-muted rounded-lg flex items-center justify-center text-xs text-muted-foreground">
-            [Strategy 1]
-          </div>
-          <div className="aspect-video bg-muted rounded-lg flex items-center justify-center text-xs text-muted-foreground">
-            [Strategy 2]
-          </div>
-        </div>
-        <ul className="text-xs text-muted-foreground list-disc list-inside">
-          <li>Personalized content</li>
-          <li>Targeted advertising</li>
-          <li>Custom email sequences</li>
-        </ul>
-      </div>
+      <Slide6/>
     ),
     onClick: () => setCurrentSlide(6)
   },
@@ -158,24 +97,17 @@ export default function Page() {
     id: 7,
     title: 'Optimizing Channel Strategies',
     content: (
-      <div className="space-y-2">
-        <h2 className="text-lg font-bold">Optimizing Channel Strategies</h2>
-        <div className="grid grid-cols-2 gap-2">
-          {['Social Media', 'Email', 'Content', 'Paid Ads'].map((channel, index) => (
-            <div key={index} className="flex items-center space-x-1">
-              <div className="w-6 h-6 bg-muted rounded flex-shrink-0 flex items-center justify-center text-xs text-muted-foreground">
-                [Icon]
-              </div>
-              <span className="text-xs truncate">{channel}</span>
-            </div>
-          ))}
-        </div>
-      </div>
+      <Slide7/>
     ),
     onClick: () => setCurrentSlide(7)
   }
-  ]);
-  return (
+]);
+useEffect(() => {
+  setSlides(slidesPreview.map((p) => {
+    return {Slide:p.content,id:p.id}
+  }))
+},[slidesPreview])
+return (
     <div className="h-screen flex flex-col bg-background">
       <Header />
       <div className="flex flex-1 overflow-hidden">
@@ -186,14 +118,22 @@ export default function Page() {
           <ResizableSidebar setCurrentSlide={setCurrentSlide} setSlidesPreview={setSlidesPreview} slidesPreview={slidesPreview} />
         </DndContext>
         <main className="flex-1 overflow-y-auto">
-          <Slide1 />
-          <Slide2 />
-          <CardTemplates/>
-          <Slide3 />
-          <Slide4 />
-          <Slide5 />
-          <Slide6 />
-          <Slide7 />
+          <div>
+            {
+              slides.map(({Slide,id},index) => {
+                return <div key={index} className='' id={`at-${id}`}>
+                  {Slide}
+                  <div
+        className="flex w-full justify-center items-center relative"
+        style={{ position: "relative", marginTop: "20px" }}
+      >
+        {/* {" "} */}
+        <AddButton slidesPreview={slidesPreview} setSlidesPreview={setSlidesPreview} />
+      </div>
+                 </div>
+              })
+            }
+          </div>
         </main>
       </div>
     </div>
