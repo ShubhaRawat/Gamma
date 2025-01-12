@@ -26,7 +26,7 @@ function CardTemplateTwoColumn({ children, ...props }) {
   }
 
   return (
-    <div className="min-h-screen w-full md:w-[70vw] md:min-h-[25vw] md:mt-[12vw] md:ml-[30vh] rounded-lg bg-[#342c4e] p-6 relative">
+    <div className="min-h-screen w-full md:w-[60vw] md:min-h-[25vw] md:mt-[12vw] md:ml-[25vh] rounded-lg bg-[#342c4e] p-6 relative">
       <div className="absolute top-4 left-11">
         <CardMenu
           onEdit={handleEdit}

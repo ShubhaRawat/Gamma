@@ -9,9 +9,9 @@ import {
   DropdownMenuSub,
   DropdownMenuSubContent,
   DropdownMenuSubTrigger,
-} from '../ui/dropdown-menu'
-import { Button } from '../ui/button'
-import { Card, CardContent, CardHeader } from '../ui/card'
+} from '../../../ui/dropdown-menu'
+import { Button } from '../../../ui/button'
+import { Card, CardContent, CardHeader } from '../../../ui/card'
 
 const COLORS = [
   { name: 'Default', value: 'inherit' },

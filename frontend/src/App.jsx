@@ -5,8 +5,8 @@ function App() {
 
   return (
     <>
-      {/* <Page/> */}
-      <CardTemplates/>
+      <Page/>
+      {/* <CardTemplates/> */}
     </>
   )
 }

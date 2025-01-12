@@ -4,6 +4,7 @@ import { ResizableSidebar } from '@/components/docView/ResizableSidebar';
 import { Slide1, Slide2, Slide3, Slide4, Slide5, Slide6, Slide7 } from '@/components/docView/Slides';
 import { closestCorners, DndContext } from '@dnd-kit/core';
 import { arrayMove } from '@dnd-kit/sortable';
+import CardTemplates from './slidesView/CardTemplates';
 
 export default function Page() {
   const [currentSlide, setCurrentSlide] = useState(1);
@@ -13,6 +14,9 @@ export default function Page() {
       slideElement.scrollIntoView({ behavior: 'smooth' });
     }
   }, [currentSlide]);
+  const [slides, setSlides] = useState([
+    Slide1,Slide2,Slide3,Slide4,Slide5,Slide6,Slide7
+  ])
   const handleDragEnd = (e) => {
     const {active,over} = e
     if (active.id === over.id) return
@@ -184,6 +188,7 @@ export default function Page() {
         <main className="flex-1 overflow-y-auto">
           <Slide1 />
           <Slide2 />
+          <CardTemplates/>
           <Slide3 />
           <Slide4 />
           <Slide5 />

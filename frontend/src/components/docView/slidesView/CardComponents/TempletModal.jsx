@@ -3,12 +3,12 @@ import {
     DialogContent,
     DialogHeader,
     DialogTitle,
-  } from "@/components/ui/dialog"
-  import { Card } from "@/components/ui/card"
+  } from "../../../ui/dialog"
+  import { Card } from "../../../ui/card"
   
-  import card1 from "@/assets/card1.png"
+  import card1 from "../assets/card1.png"
   import { useState } from "react"
-  import card2 from "@/assets/card2.png"
+  import card2 from "../assets/card2.png"
   import ImageCradText from "../ImageCardText"
   
 

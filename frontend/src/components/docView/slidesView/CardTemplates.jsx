@@ -6,10 +6,10 @@ import CardTemplateTwoColumn from "./CardTempletTwoColumn"
 import CardTemplateImgHeadingThree from "./CardTemplateImgHeadingThree"
 import ImageCradText from "./ImageCardText"
 import { CardMenu } from "./Menu/CardMenu"
-import card1 from '../assets/card1.png'
-import card2 from '../assets/card2.png'
-import card3 from '../assets/card3.png'
-import card4 from '../assets/card4.png'
+import card1 from './assets/card1.png'
+import card2 from './assets/card2.png'
+import card3 from './assets/card3.png'
+import card4 from './assets/card4.png'
 import { TemplatesModal } from "./CardComponents/TempletModal"
 import AccentImage from "./AccentImage"
 
@@ -72,7 +72,7 @@ export default function CardTemplates({ children, ...props }) {
 
 
   return (
-    <div className="min-h-screen w-full md:w-[70vw] md:min-h-[25vw] md:mt-[12vw] md:ml-[30vh] rounded-lg px-1 bg-[#342c4e] p-6 relative">
+    <div className="min-h-screen w-full md:w-[60vw] md:min-h-[25vw] md:mt-[12vw] md:ml-[25vh] rounded-lg px-1 bg-[#342c4e] p-6 relative">
       <div className="absolute top-4 left-11">
         <CardMenu
           onEdit={handleEdit}
@@ -85,7 +85,7 @@ export default function CardTemplates({ children, ...props }) {
 
       <input
         type="text"
-        className="w-full md:w-[60vw] h-16 px-6 md:ml-10 text-4xl mb-14 mt-10 rounded-md bg-[#342c4e] text-white focus:border-black"
+        className="w-full md:w-[53vw] h-16 px-6 inset-0 md:ml-12 text-4xl mb-14 mt-10 rounded-md bg-[#342c4e] text-white focus:border-black"
         placeholder="Untitled card"
       />
 
