@@ -2,7 +2,8 @@
 import React, { useState } from "react"
 import { CardMenu } from "./Menu/CardMenu"
 import TitleInput from "./CardComponents/TitleInput"
-
+import Heading from './CardComponents/Heading'
+import ParagraphInput from './CardComponents/ParagraphInput'
 function CardTemplateImgHeadingThree() {
   const [previews, setPreviews] = useState([null, null, null])
 
@@ -40,7 +41,7 @@ function CardTemplateImgHeadingThree() {
   }
 
   return (
-    <div className="min-h-screen w-full md:w-[60vw] md:min-h-[25vw] md:mt-[12vw] md:ml-[25vh] rounded-lg bg-[#342c4e] p-6 relative">
+    <div className="min-h-screen w-full md:w-[60vw] md:min-h-[25vw] rounded-lg bg-[#342c4e] p-6 relative">
       <div className="absolute top-4 left-11">
         <CardMenu
           onEdit={handleEdit}
@@ -55,7 +56,7 @@ function CardTemplateImgHeadingThree() {
       <TitleInput/>
 
       {/* Cards Container */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 px-10 mt-6">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-5 px-10 mt-6">
         {[0, 1, 2].map((index) => (
           <div
             key={index}
@@ -104,28 +105,11 @@ function CardTemplateImgHeadingThree() {
             </div>
 
             {/* Heading */}
-            <textarea
-              className="text-xl font-semibold text-white bg-transparent border-none outline-none mb-3 
-                         placeholder:text-[#9d8ba7] resize-none overflow-hidden focus:ring-0"
-              placeholder="Heading"
-              rows={1}
-              onInput={(e) => {
-                e.target.style.height = "auto"
-                e.target.style.height = `${e.target.scrollHeight}px`
-              }}
-            />
+            <ParagraphInput />
+            
 
             {/* Subheading */}
-            <textarea
-              className="text-sm text-white/90 bg-transparent border-none outline-none 
-                         placeholder:text-[#9d8ba7] resize-none overflow-hidden focus:ring-0"
-              placeholder="Start typing..."
-              rows={2}
-              onInput={(e) => {
-                e.target.style.height = "auto"
-                e.target.style.height = `${e.target.scrollHeight}px`
-              }}
-            />
+            <Heading />
           </div>
         ))}
       </div>

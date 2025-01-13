@@ -108,7 +108,7 @@ useEffect(() => {
   }))
 },[slidesPreview])
 return (
-    <div className="h-screen flex flex-col bg-background">
+    <div className="h-screen flex flex-col  bg-background">
       <Header />
       <div className="flex flex-1 overflow-hidden">
         <DndContext
@@ -128,7 +128,7 @@ return (
         style={{ position: "relative", marginTop: "20px" }}
       >
         {/* {" "} */}
-        <AddButton slidesPreview={slidesPreview} setSlidesPreview={setSlidesPreview} />
+        {/* <AddButton slidesPreview={slidesPreview} setSlidesPreview={setSlidesPreview} /> */}
       </div>
                  </div>
               })

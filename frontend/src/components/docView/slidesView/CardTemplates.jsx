@@ -4,6 +4,7 @@ import { Grid2X2, Sparkles } from 'lucide-react'
 import CardTemplateTwoColumn from "./CardTempletTwoColumn"
 import CardTemplateImgHeadingThree from "./CardTemplateImgHeadingThree"
 import ImageCradText from "./ImageCardText"
+import TitleInput from './CardComponents/TitleInput'
 import { CardMenu } from "./Menu/CardMenu"
 import card1 from './assets/card1.png'
 import card2 from './assets/card2.png'
@@ -51,7 +52,7 @@ export default function CardTemplates({ children, ...props }) {
 
   return (
     <div>
-      <div className="min-h-screen w-full md:w-[60vw] md:min-h-[25vw] md:mt-[12vw]  rounded-lg px-1 bg-[#342c4e] p-6 relative">
+      <div className="min-h-screen w-full md:w-[60vw] md:min-h-[25vw] md:mt-[3vh] rounded-lg px-1 bg-[#342c4e] p-6 relative">
         <div className="absolute top-4 left-11">
           <CardMenu
             onEdit={handleEdit}
@@ -61,12 +62,9 @@ export default function CardTemplates({ children, ...props }) {
             onDownload={handleDownload}
           />
         </div>
-
-        <input
-          type="text"
-          className="w-full md:w-[50vw] h-16 px-6 md:ml-10 text-4xl mb-14 mt-10 rounded-md bg-[#342c4e] text-white focus:border-black"
-          placeholder="Untitled card"
-        />
+        <div className="mt-10">
+          <TitleInput />
+        </div>
 
         <div className="space-y-3">
           <h2 className="text-[#9d8ba7] text-lg px-10">
