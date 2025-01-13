@@ -1,27 +1,16 @@
 import React from 'react';
-
+import CardTemplates from './slidesView/CardTemplates';
 export function Slide1() {
   return (
-    <div  className="min-h-screen flex items-center justify-center">
-      <div className="max-w-4xl mx-auto p-8">
-        <h1 className="text-5xl font-bold mb-6">Customer Targeting Strategy</h1>
-        <p className="text-xl text-muted-foreground mb-8 max-w-3xl">
-          Unlocking the secret to customer success requires a comprehensive understanding 
-          of your target audience. This presentation outlines a strategic approach to 
-          customer targeting, emphasizing data-driven insights, personalized messaging, 
-          and optimized channel strategies.
-        </p>
-        <div className="aspect-video bg-muted rounded-lg mb-8 flex items-center justify-center text-muted-foreground">
-          [Main Strategy Image]
-        </div>
-      </div>
+    <div  className="flex justify-center ">
+        {<CardTemplates />}
     </div>
-  );
+  )
 }
 
 export function Slide2() {
   return (
-    <div  className="min-h-screen flex items-center justify-center ">
+    <div  className="flex justify-center ">
       <div className="max-w-4xl mx-auto p-8">
         <h2 className="text-4xl font-bold mb-6">Understanding Your Target Audience</h2>
         <div className="grid grid-cols-2 gap-8">

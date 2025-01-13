@@ -23,10 +23,10 @@ const COLORS = [
 ]
 
 const SIZES = [
-  { name: 'Small', value: '0.875rem' },
-  { name: 'Normal', value: '1rem' },
-  { name: 'Large', value: '1.25rem' },
-  { name: 'Extra Large', value: '1.5rem' },
+  { name: 'Small', value: '1rem' },
+  { name: 'Normal', value: '1.5rem' },
+  { name: 'Large', value: '2rem' },
+  { name: 'Extra Large', value: '2.5rem' },
 ]
 
 export default function TextEditor() {
@@ -69,7 +69,7 @@ export default function TextEditor() {
   }
 
   return (
-    <Card className="w-full flex justify-start w-2xl mx-auto bg-transparent border-transparent mt-[-15px] ml-1">
+    <Card className="w-full flex justify-start w-2xl mx-auto bg-transparent border-transparent mt-[20px] mb-2  ">
       <CardHeader className="flex flex-row justify-between space-y-0 px-4 py-3">
         <DropdownMenu>
           <DropdownMenuTrigger asChild>
@@ -169,7 +169,7 @@ export default function TextEditor() {
       </CardHeader>
       <CardContent className="px-1 py-1 w-full">
         <div 
-          className="min-h-[5px] w-full rounded-lg bg-white/10 p-6 text-white/90 focus:outline-none mt-10"
+          className="min-h-[5px] w-full rounded-lg  bg-transparent p-6 text-white/90 focus:outline-none  text-3xl"
           style={{
             textAlign: alignment
           }}
@@ -179,7 +179,7 @@ export default function TextEditor() {
           onFocus={handlePlaceholder}
           onBlur={handlePlaceholder}
         >
-          <input type="text" className="text-white bg-transparent text-5xl" placeholder='Untitled Text'/>
+          <input type="text" className="text-white w-full bg-transparent text-3xl" placeholder='Untitled Text'/>
         </div>
       </CardContent>
     </Card>

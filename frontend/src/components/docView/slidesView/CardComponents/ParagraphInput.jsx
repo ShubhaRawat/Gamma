@@ -23,10 +23,10 @@ const COLORS = [
 ]
 
 const SIZES = [
-  { name: 'Small', value: '0.875rem' },
-  { name: 'Normal', value: '1rem' },
-  { name: 'Large', value: '1.25rem' },
-  { name: 'Extra Large', value: '1.5rem' },
+  { name: 'Small', value: '1rem' },
+  { name: 'Normal', value: '1.5rem' },
+  { name: 'Large', value: '2rem' },
+  { name: 'Extra Large', value: '2.5rem' },
 ]
 
 export default function TextEditor() {
@@ -69,7 +69,7 @@ export default function TextEditor() {
   }
 
   return (
-    <Card className="w-full flex justify-start max-w-4xl  mt-10 bg-[#2e294e] border-none shadow-xl">
+    <Card className="w-full flex justify-start max-w-4xl p-0 m-0 mt-10 bg-[#2e294e] flex-wrap border-none shadow-xl">
       <CardHeader className="flex flex-row justify-between space-y-0 px-4 py-3">
         <DropdownMenu>
           <DropdownMenuTrigger asChild>
@@ -169,7 +169,7 @@ export default function TextEditor() {
       </CardHeader>
       <CardContent className="p-2 w-full">
         <div 
-          className="min-h-[100px] w-full rounded-lg bg-transparent p-6 text-white/90 focus:outline-none"
+          className="min-h-[100px] w-full rounded-lg bg-white/10 p-6 text-white/90 focus:outline-none text-xl"
           style={{
             textAlign: alignment
           }}
@@ -179,7 +179,7 @@ export default function TextEditor() {
           onFocus={handlePlaceholder}
           onBlur={handlePlaceholder}
         >
-          <span className="text-white/50 text-xl"></span>
+          <input  className="text-white/50 w-full text-xl bg-transparent" placeholder='Enter Subheading' />
         </div>
       </CardContent>
     </Card>

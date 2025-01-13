@@ -66,7 +66,7 @@ function ImageCardText({ children, ...props }) {
 
   return (
     <div
-      className="min-h-screen w-full md:w-[60vw] md:min-h-[25vw] md:mt-[12vw] md:ml-[25vh] rounded-lg bg-[#342c4e] p-6 relative"
+      className="min-h-screen  w-full md:w-[60vw] md:min-h-[20vh] rounded-lg bg-[#342c4e] p-6 relative"
       onMouseMove={handleMouseMove}
       onMouseUp={handleMouseUp}
       onMouseLeave={handleMouseUp}
@@ -140,7 +140,7 @@ function ImageCardText({ children, ...props }) {
           />
         </div>
 
-        <div className="flex flex-col w-full md:w-[65%] gap-4">
+        <div className="flex flex-col w-full  md:w-[65%] gap-4">
           <div>
             <TitleInput placeholder="Title" />
             <ParagraphInput placeholder="Start typing..." />
