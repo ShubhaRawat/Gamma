@@ -1,27 +1,16 @@
 import React from 'react';
-
+import CardTemplates from './slidesView/CardTemplates';
 export function Slide1() {
   return (
-    <div id="slide-1" className="min-h-screen flex items-center justify-center">
-      <div className="max-w-4xl mx-auto p-8">
-        <h1 className="text-5xl font-bold mb-6">Customer Targeting Strategy</h1>
-        <p className="text-xl text-muted-foreground mb-8 max-w-3xl">
-          Unlocking the secret to customer success requires a comprehensive understanding 
-          of your target audience. This presentation outlines a strategic approach to 
-          customer targeting, emphasizing data-driven insights, personalized messaging, 
-          and optimized channel strategies.
-        </p>
-        <div className="aspect-video bg-muted rounded-lg mb-8 flex items-center justify-center text-muted-foreground">
-          [Main Strategy Image]
-        </div>
-      </div>
+    <div  className="flex justify-center ">
+        {<CardTemplates />}
     </div>
-  );
+  )
 }
 
 export function Slide2() {
   return (
-    <div id="slide-2" className="min-h-screen flex items-center justify-center">
+    <div  className="flex justify-center ">
       <div className="max-w-4xl mx-auto p-8">
         <h2 className="text-4xl font-bold mb-6">Understanding Your Target Audience</h2>
         <div className="grid grid-cols-2 gap-8">
@@ -45,7 +34,7 @@ export function Slide2() {
 
 export function Slide3() {
   return (
-    <div id="slide-3" className="min-h-screen flex items-center justify-center">
+    <div className="min-h-screen flex items-center justify-center">
       <div className="max-w-4xl mx-auto p-8">
         <h2 className="text-4xl font-bold mb-6">Identifying Customer Pain Points</h2>
         <div className="grid grid-cols-3 gap-8">
@@ -66,7 +55,7 @@ export function Slide3() {
 
 export function Slide4() {
   return (
-    <div id="slide-4" className="min-h-screen flex items-center justify-center">
+    <div  className="min-h-screen flex items-center justify-center">
       <div className="max-w-4xl mx-auto p-8">
         <h2 className="text-4xl font-bold mb-6">Developing Buyer Personas</h2>
         <div className="aspect-square bg-muted rounded-lg mb-8 flex items-center justify-center text-muted-foreground">
@@ -83,7 +72,7 @@ export function Slide4() {
 
 export function Slide5() {
   return (
-    <div id="slide-5" className="min-h-screen flex items-center justify-center">
+    <div  className="min-h-screen flex items-center justify-center">
       <div className="max-w-4xl mx-auto p-8">
         <h2 className="text-4xl font-bold mb-6">Utilizing Customer Segmentation</h2>
         <div className="grid grid-cols-2 gap-8">
@@ -110,7 +99,7 @@ export function Slide5() {
 
 export function Slide6() {
   return (
-    <div id="slide-6" className="min-h-screen flex items-center justify-center">
+    <div  className="min-h-screen flex items-center justify-center">
       <div className="max-w-4xl mx-auto p-8">
         <h2 className="text-4xl font-bold mb-6">Crafting Tailored Marketing Strategies</h2>
         <div className="grid grid-cols-2 gap-8 mb-8">
@@ -140,7 +129,7 @@ export function Slide6() {
 
 export function Slide7() {
   return (
-    <div id="slide-7" className="min-h-screen flex items-center justify-center">
+    <div  className="min-h-screen flex items-center justify-center">
       <div className="max-w-4xl mx-auto p-8">
         <h2 className="text-4xl font-bold mb-6">Optimizing Channel Strategies</h2>
         <div className="space-y-6">
